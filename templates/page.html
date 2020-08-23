@@ -15,6 +15,30 @@
       {{ page.content | safe }}
     </div>
 
+    <div>
+        {% for asset in page.assets %}
+        {% if asset is matching("[.](jpg|png)$") %}
+            {% if asset ~ ".txt" in page.assets %}
+            <div style="display: flex; flex-direction: row; flex-wrap: nowrap;">
+            <div style="flex:0">
+                <a href="{{ get_url(path=asset) }}">
+                <img src="{{ resize_image(path=asset, width=240, height=180, op="fill") }}" />
+                </a>
+            </div>
+            <div style="flex:1">
+                {{ load_data(path="content/" ~ asset ~ ".txt") | markdown | safe }}
+            </div>
+            </div>
+            {% else %}
+            <a href="{{ get_url(path=asset) }}">
+            <img src="{{ resize_image(path=asset, width=240, height=180, op="fill") }}" />
+            </a>
+            &ensp;
+            {% endif %}
+        {% endif %}
+        {% endfor %}
+    </div>
+
     {% block page_footer %}
         <footer>
             <hr>
@@ -27,7 +51,7 @@
                     in <a href="{{ get_taxonomy_url(kind="categories", name=category) | safe }}">{{ category }}</a>
                 {% endif %}
                 {% if page.taxonomies.tags %}
-                    and tagged
+                    Tags:
                     {% for tag in page.taxonomies.tags %}
                         <a href="{{ get_taxonomy_url(kind="tags", name=tag) | safe }}">{{ tag }}</a>
                         {% if page.taxonomies.tags | length > 1 %}
