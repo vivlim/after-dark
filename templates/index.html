@@ -24,6 +24,10 @@
     </head>
 
     <body class="hack dark main container">
+      <div>
+        <img src="/header.gif" alt="header image for vvn.space">
+      </div>
+      <div class="hack dark main container">
         {% block content %}
             {% block header %}
                 {% if config.extra.after_dark_menu %}
@@ -64,6 +68,7 @@
                 </nav>
             </main>
         {% endblock content %}
+      </div>
     </body>
 
 </html>
