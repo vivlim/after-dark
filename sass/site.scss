@@ -1,2 +1,28 @@
+$color-bg: #361E48;
+$color-fg: #ffffff;
+$color-link-hover: #dbe4ee;
+$color-link: #81a4cd;
+$color-highlight: #ee5622;
+
+$color-header: #ff5a5f;
+$color-header-link: #ee5622;
+
+$color-code-block-fg: #ffffff;
+$color-code-block-bg: #407e8e;
+
+$color-blockquote-fg: #ffffff;
+$color-blockquote-bg: #4e5283;
+
+$color-nav-fg: #fff;
+$color-nav-bg: #888da7;
+
+$color-nav-fg-hover: #fff;
+$color-nav-bg-hover: #9c7a97;
+
+$border-radius: 10px;
+
+$image-border-color: $color-link;
+$image-border-color-hover: $color-link-hover;
+
 @import "vendor";
 @import "theme";

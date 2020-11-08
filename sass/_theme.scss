@@ -58,15 +58,23 @@ blockquote cite::before {
   padding: 20px 10px;
 }
 nav a.active {
-  background-color: #43d0de;
+  background-color: $color-highlight;
   color: #000;
 }
+
 a[itemprop="url"] {
-  color: #ff9800;
+  color: $color-nav-fg;
+  margin-inline-end: 0.5em;
+  padding: 5px;
+  background-color: $color-nav-bg;
+  border-radius: 5px;
+  text-decoration: none;
 }
 a[itemprop="url"]:hover {
-  color: #fff;
+  color: $color-nav-fg-hover;
+  background-color: $color-nav-bg-hover;
 }
+
 html {
   font-size: 13px;
 }
