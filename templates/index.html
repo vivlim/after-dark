@@ -25,8 +25,13 @@
     </head>
 
     <body class="hack dark main container">
-      <div>
-        <img src="/header.gif" alt="header image for vvn.space" style="height:8em"/>
+      <div class="site-header">
+        <div class="big">
+          <span class="emoji">⭐</span>&nbsp;<span class="text">vvn.space</span>
+        </div>
+        <div class="little">
+          "it's my website"
+        </div>
       </div>
       <div class="hack dark main container">
         {% block content %}
@@ -45,6 +50,8 @@
                     </header>
                 {% endif %}
             {% endblock header %}
+
+            <hr />
 
             <main>
                 {% if config.extra.after_dark_title %}

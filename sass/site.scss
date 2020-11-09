@@ -13,16 +13,45 @@ $color-code-block-bg: #407e8e;
 $color-blockquote-fg: #ffffff;
 $color-blockquote-bg: #4e5283;
 
-$color-nav-fg: #fff;
-$color-nav-bg: #888da7;
+$color-nav-fg: #000;
+$color-nav-bg: #c2aff0;
 
-$color-nav-fg-hover: #fff;
+$color-nav-fg-hover: #000;
 $color-nav-bg-hover: #9c7a97;
 
 $border-radius: 10px;
 
 $image-border-color: $color-link;
 $image-border-color-hover: $color-link-hover;
+
+div.site-header {
+    width: min-content;
+}
+
+div.site-header div.big {
+    font-size: 72px;
+    font-weight: 800;
+    line-height: 1em;
+}
+
+div.site-header div.big span.text {
+    color: $color-nav-bg;
+    -webkit-text-stroke: 2px $color-nav-bg-hover;
+}
+
+div.site-header div.big span.emoji {
+    color: transparent;
+    text-shadow: 0 0 0 $color-nav-bg;
+}
+
+div.site-header div.little {
+    font-size: 24px;
+    font-weight: 800;
+    line-height: 1em;
+    color: $color-nav-bg-hover;
+    text-align: right;
+    font-style: italic;
+}
 
 @import "vendor";
 @import "theme";
